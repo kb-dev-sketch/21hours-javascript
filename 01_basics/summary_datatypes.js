@@ -50,3 +50,33 @@ console.log(user[_id]); // 101
 
 //console.log(typeof heros) // object
 //console.log(typeof login) // function object
+
+//------- memories ----------//
+
+// stack ,heap
+
+// stack =>>>>> used in primitive data type
+
+// heap =>>>>> used in non primitive data types 
+
+// stack 
+let myYoutubename = "king" // primitive type is stored in the stack
+let anotherName = myYoutubename// a copy of the value is created in the stack
+anotherName = "karan"// changing the copy does not afffect the original
+console.log(myYoutubename)// king (original value is remai same)
+console.log(anotherName)// karan (only copy value is changed)
+///heap
+let userOne = {         // The reference to this object is stored in the Stack.
+    email: "user@google.com",
+    upi: "user@ybl"
+};                      // The actual object data is stored in the Heap.
+
+let userTwo = userOne;  // userTwo references the same object in the Heap.
+
+userTwo.email = "ayush@google.com"; // Modifying userTwo also affects userOne.
+
+console.log(userOne.email); // Output: ayush@google.com
+console.log(userTwo.email); // Output: ayush@google.com
+
+// Variables that refernces the same Object share the same location in memory ,
+// so change to in variable affect the other
